@@ -1,0 +1,868 @@
+{
+	"info": {
+		"_postman_id": "accd98a5-6d3e-4b51-ae50-54dd58e24396",
+		"name": "Register APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27310212"
+	},
+	"item": [
+		{
+			"name": "timeZone",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "timeZoneAPI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://front.opperdev.com/api/timezone",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"timezone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "legalEntityReg",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"insecureHTTPParser": false,
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "DGDFGDbnbnTRTEfg67hgyTYRTY56gfhdR6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "legalEntityRegister",
+						"type": "text"
+					},
+					{
+						"key": "PUBLIC_KEY",
+						"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://front.opperdev.com/api/register?utcTimeStamp=2023-05-09T17:05:28Z&signature=980a7eb8bb6cc5c2384127c5457508c3340ed8819ba2dce767b426cdc7253d51&telephone=131&NIT=12124&razon_social=razonSocial1asda&type_user_id=1&password=razonsocial1&password_confirmation=razonsocial1&email=razonsoecialasd@mail.com&verify_tc=1&apiKey=VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "utcTimeStamp",
+							"value": "2023-05-09T17:05:28Z"
+						},
+						{
+							"key": "signature",
+							"value": "980a7eb8bb6cc5c2384127c5457508c3340ed8819ba2dce767b426cdc7253d51"
+						},
+						{
+							"key": "telephone",
+							"value": "131"
+						},
+						{
+							"key": "NIT",
+							"value": "12124"
+						},
+						{
+							"key": "razon_social",
+							"value": "razonSocial1asda"
+						},
+						{
+							"key": "type_user_id",
+							"value": "1"
+						},
+						{
+							"key": "password",
+							"value": "razonsocial1"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "razonsocial1"
+						},
+						{
+							"key": "email",
+							"value": "razonsoecialasd@mail.com"
+						},
+						{
+							"key": "verify_tc",
+							"value": "1"
+						},
+						{
+							"key": "apiKey",
+							"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g"
+						},
+						{
+							"key": "PRIVATE_KEY",
+							"value": "DGDFGDbnbnTRTEfg67hgyTYRTY56gfhdR6",
+							"description": "PRIVATE_KEY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "naturalPersonReg",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"insecureHTTPParser": false,
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "DGDFGDbnbnTRTEfg67hgyTYRTY56gfhdR6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "legalEntityRegister",
+						"type": "text"
+					},
+					{
+						"key": "PUBLIC_KEY",
+						"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://front.opperdev.com/api/register?name=randomusername12&lastname=randomusername12&telephone=21312&identy_document=123123&type_user_id=2&verify_tc=1&password=strongkey12321&password_confirmation=strongkey12321&email=randommailasd@mail.com&apiKey=VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g&utcTimeStamp=2023-05-09T17:23:07Z&signature=5ffeec6d18b0bee46f074c2abef1c19c50a5909f249369520fa084d2dc8ccc00",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "randomusername12"
+						},
+						{
+							"key": "lastname",
+							"value": "randomusername12"
+						},
+						{
+							"key": "telephone",
+							"value": "21312"
+						},
+						{
+							"key": "identy_document",
+							"value": "123123"
+						},
+						{
+							"key": "type_user_id",
+							"value": "2"
+						},
+						{
+							"key": "verify_tc",
+							"value": "1"
+						},
+						{
+							"key": "password",
+							"value": "strongkey12321"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "strongkey12321"
+						},
+						{
+							"key": "email",
+							"value": "randommailasd@mail.com"
+						},
+						{
+							"key": "apiKey",
+							"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g"
+						},
+						{
+							"key": "utcTimeStamp",
+							"value": "2023-05-09T17:23:07Z"
+						},
+						{
+							"key": "signature",
+							"value": "5ffeec6d18b0bee46f074c2abef1c19c50a5909f249369520fa084d2dc8ccc00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"insecureHTTPParser": false,
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "DGDFGDbnbnTRTEfg67hgyTYRTY56gfhdR6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "legalEntityRegister",
+						"type": "text"
+					},
+					{
+						"key": "PUBLIC_KEY",
+						"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://front.opperdev.com/api/register?name=randomusername12&lastname=randomusername12&telephone=21312&identy_document=123123&type_user_id=2&verify_tc=1&password=strongkey12321&password_confirmation=strongkey12321&email=randommailasd@mail.com&apiKey=VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g&utcTimeStamp=2023-05-09T17:23:07Z&signature=5ffeec6d18b0bee46f074c2abef1c19c50a5909f249369520fa084d2dc8ccc00",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "randomusername12"
+						},
+						{
+							"key": "lastname",
+							"value": "randomusername12"
+						},
+						{
+							"key": "telephone",
+							"value": "21312"
+						},
+						{
+							"key": "identy_document",
+							"value": "123123"
+						},
+						{
+							"key": "type_user_id",
+							"value": "2"
+						},
+						{
+							"key": "verify_tc",
+							"value": "1"
+						},
+						{
+							"key": "password",
+							"value": "strongkey12321"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "strongkey12321"
+						},
+						{
+							"key": "email",
+							"value": "randommailasd@mail.com"
+						},
+						{
+							"key": "apiKey",
+							"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g"
+						},
+						{
+							"key": "utcTimeStamp",
+							"value": "2023-05-09T17:23:07Z"
+						},
+						{
+							"key": "signature",
+							"value": "5ffeec6d18b0bee46f074c2abef1c19c50a5909f249369520fa084d2dc8ccc00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"insecureHTTPParser": false,
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Zyb250Lm9wcGVyZGV2LmNvbS9hcGkvbG9naW4iLCJpYXQiOjE2ODM2NzY0NTEsImV4cCI6MTY4MzY4MzY1MSwibmJmIjoxNjgzNjc2NDUxLCJqdGkiOiJBa3VJdjJzU3JwdlQ2cWk1Iiwic3ViIjoiMjI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.p1c4U_5-Rk-vjtEPJA9OIveGBcX5jFV0lpXkETCPQ7E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "legalEntityRegister",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://front.opperdev.com/api/v1/me?apiKey=VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g&utcTimeStamp=2023-05-09T18:50:40Z&signature=d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g"
+						},
+						{
+							"key": "utcTimeStamp",
+							"value": "2023-05-09T18:50:40Z"
+						},
+						{
+							"key": "signature",
+							"value": "d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategories",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"insecureHTTPParser": false,
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Zyb250Lm9wcGVyZGV2LmNvbS9hcGkvbG9naW4iLCJpYXQiOjE2ODM2NzY0NTEsImV4cCI6MTY4MzY4MzY1MSwibmJmIjoxNjgzNjc2NDUxLCJqdGkiOiJBa3VJdjJzU3JwdlQ2cWk1Iiwic3ViIjoiMjI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.p1c4U_5-Rk-vjtEPJA9OIveGBcX5jFV0lpXkETCPQ7E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://front.opperdev.com/api/v1/categoria?apiKey=VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g&utcTimeStamp=2023-05-09T18:50:40Z&signature=d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"categoria"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g"
+						},
+						{
+							"key": "utcTimeStamp",
+							"value": "2023-05-09T18:50:40Z"
+						},
+						{
+							"key": "signature",
+							"value": "d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategories Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"insecureHTTPParser": false,
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Zyb250Lm9wcGVyZGV2LmNvbS9hcGkvbG9naW4iLCJpYXQiOjE2ODM2NzY0NTEsImV4cCI6MTY4MzY4MzY1MSwibmJmIjoxNjgzNjc2NDUxLCJqdGkiOiJBa3VJdjJzU3JwdlQ2cWk1Iiwic3ViIjoiMjI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.p1c4U_5-Rk-vjtEPJA9OIveGBcX5jFV0lpXkETCPQ7E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://front.opperdev.com/api/v1/categoria/create?apiKey=VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g&utcTimeStamp=2023-05-09T18:50:40Z&signature=d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"categoria",
+						"create"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g"
+						},
+						{
+							"key": "utcTimeStamp",
+							"value": "2023-05-09T18:50:40Z"
+						},
+						{
+							"key": "signature",
+							"value": "d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refreshCategories",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				},
+				"followOriginalHttpMethod": true,
+				"followAuthorizationHeader": true,
+				"removeRefererHeaderOnRedirect": true,
+				"insecureHTTPParser": false,
+				"strictSSL": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2Zyb250Lm9wcGVyZGV2LmNvbS9hcGkvbG9naW4iLCJpYXQiOjE2ODM2NzY0NTEsImV4cCI6MTY4MzY4MzY1MSwibmJmIjoxNjgzNjc2NDUxLCJqdGkiOiJBa3VJdjJzU3JwdlQ2cWk1Iiwic3ViIjoiMjI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.p1c4U_5-Rk-vjtEPJA9OIveGBcX5jFV0lpXkETCPQ7E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://front.opperdev.com/api/v1/categoria/create?name=Hola que tal?&apiKey=VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g&utcTimeStamp=2023-05-09T18:50:40Z&signature=d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7",
+					"protocol": "https",
+					"host": [
+						"front",
+						"opperdev",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"categoria",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hola que tal?"
+						},
+						{
+							"key": "apiKey",
+							"value": "VBNfgfTYrt5666FGHFG6FGH65GHFGHF656g"
+						},
+						{
+							"key": "utcTimeStamp",
+							"value": "2023-05-09T18:50:40Z"
+						},
+						{
+							"key": "signature",
+							"value": "d5d8f76aae6e55d3eab469e7e504f816265cd43104470fb878bd9385087d4fd7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
